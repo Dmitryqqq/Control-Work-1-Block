@@ -96,11 +96,26 @@ string []SortArr(string []arr)
   int index =  0;
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.WriteLine($"Введите {i+1} элемент массива. ");
-        array[i] = Console.ReadLine();
-
+        if(arr[i].Length <= 3 )
+        {
+        array[index] = arr[i];
+        index++;
+        }
+    }
+    string []array2 = new string[index];
+    for (int i = 0; i < index; i++)
+    {
+        array2[i] = array[i];
     }
 
-    return arr;
+    return array2;
 }
 
+ string[] vvod = InitArr();
+PrintArr(vvod);
+Console.WriteLine();
+Console.WriteLine("Элементы масссива длинной 3 и меннее символа :");
+string[] sort = SortArr(vvod);
+
+PrintArr(sort);
+//PrintArr(vvod);
