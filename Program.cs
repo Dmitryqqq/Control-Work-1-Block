@@ -118,4 +118,5 @@ Console.WriteLine("Элементы масссива длинной 3 и мен�
 string[] sort = SortArr(vvod);
 
 PrintArr(sort);
-//PrintArr(vvod);
+Console.WriteLine();
+PrintArr(vvod);
