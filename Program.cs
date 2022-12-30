@@ -8,19 +8,6 @@
 ["Визза", "Рептагк", "Кагап"] -> []
 */
 
-int GitNumer(string messege)
-{int number = 0;
-  while (true)
-  {
-    Console.WriteLine(messege+" ");
-    if (int.TryParse(Console.ReadLine() ?? "",out number))
-    break;
-    else Console.WriteLine("Введено не корректное число ");
-
-  } 
-    return number;
-
-}
 
 string []InitArr()
 {
@@ -59,12 +46,8 @@ string []InitArr()
           for (int i = 0; i < arr2.Length - 1; i++)
             arr2[i] = arr[i];
 
-          // добавить последнюю введенную строку в массив AS2
+          // добавить последнюю введенную строку в массив arr2
           arr2[count - 1] = s;
-
-          
-
-          // перенаправить ссылку AS на AS2
           arr = arr2;
         }
       } while (s != "");
@@ -72,17 +55,7 @@ string []InitArr()
       
       return arr;
     }
-/*{ string []array = new string[arr.Length];
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.WriteLine($"Введите {i+1} элемент массива. ");
-        array[i] = Console.ReadLine();
 
-    }
-
-    return arr;
-}
-*/
 void PrintArr(string[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
@@ -111,12 +84,10 @@ string []SortArr(string []arr)
     return array2;
 }
 
- string[] vvod = InitArr();
+// Тело программы.
+string[] vvod = InitArr();
 PrintArr(vvod);
 Console.WriteLine();
 Console.WriteLine("Элементы масссива длинной 3 и меннее символа :");
 string[] sort = SortArr(vvod);
-
 PrintArr(sort);
-Console.WriteLine();
-PrintArr(vvod);
